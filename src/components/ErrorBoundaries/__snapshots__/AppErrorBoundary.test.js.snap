@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppErrorBoundary Component Test Renders children when there is no app error 1`] = `
+<div>
+  <span
+    data-testid="app-error-boundary-test-child"
+  >
+    <span />
+  </span>
+</div>
+`;
+
+exports[`AppErrorBoundary Component Test Renders error message and report form when there is an error 1`] = `
+<div>
+  <div
+    data-testid="app-error-boundary-error"
+    style="position: absolute; top: 50%; left: 0px; right: 0px; width: 100%; padding: 20px; line-height: 1.5; font-size: 16px; background-color: rgb(104, 0, 0); color: rgb(255, 255, 255); text-align: center; font-weight: 300; z-index: 1e+40;"
+  >
+    <div
+      style="max-width: 750px; margin: 0px auto;"
+    >
+      <p>
+        Sorry, something went wrong.
+      </p>
+      <p
+        data-testid="app-error-boundary-report-form-wrapper"
+      >
+        This error has been reported to our development team, but
+         
+        <button
+          style="text-decoration: underline; cursor: pointer; font-weight: 300; color: rgb(255, 255, 255); padding: 0px; background: rgba(0, 0, 0, 0); font-size: 16px; line-height: 1.5;"
+        >
+          click here to fill out a report.
+        </button>
+      </p>
+      <p>
+        You can try reloading the page, or using the menu if it is available.
+      </p>
+    </div>
+  </div>
+</div>
+`;

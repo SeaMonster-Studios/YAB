@@ -1,0 +1,86 @@
+{
+  "name": "yab",
+  "author": {
+    "name": "Logan Call",
+    "email": "logan@seamonsterstudios.com",
+    "url": "https://seamonsterstudios.com"
+  },
+  "version": "1.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "rs-start": "react-static start",
+    "build": "react-static build",
+    "rs-serve": "serve dist -p 3000",
+    "server": "cd server && nodemon server.js",
+    "api-mock-server": "cd api-mocks && nodemon server.js",
+    "start":
+      "concurrently --kill-others-on-fail \"yarn api-mock-server\" \"NODE_ENV=development yarn server\" \"yarn rs-start\"",
+    "serve":
+      "yarn build && concurrently --kill-others-on-fail \"yarn api-mock-server\" \"NODE_ENV=production yarn server\"",
+    "serve-local":
+      "yarn build && concurrently --kill-others-on-fail \"yarn api-mock-server\" \"NODE_ENV=production-local yarn server\"",
+    "test": "jest --watch",
+    "test:update": "jest -u",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "testURL": "http://localhost:3000",
+    "collectCoverageFrom": [
+      "src/**",
+      "!**/__snapshots__/**",
+      "!src/styles/**",
+      "!src/App.jsx",
+      "!src/index.js"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "axios-mock-adapter": "^1.15.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-styled-components": "^1.5.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
+    "dotenv": "^5.0.1",
+    "email-validator": "^1.1.1",
+    "eslint-plugin-babel": "^5.0.0",
+    "eslint-plugin-jest": "^21.15.0",
+    "eslint-plugin-react": "^7.7.0",
+    "express": "^4.16.2",
+    "express-http-proxy": "^1.1.0",
+    "express-spa-router": "^0.0.8",
+    "https": "^1.0.0",
+    "jest": "^22.4.3",
+    "js-cookie": "^2.2.0",
+    "json-loader": "^0.5.7",
+    "json-server": "^0.12.1",
+    "jsonwebtoken": "^8.2.1",
+    "nodemon": "^1.17.3",
+    "prop-types": "^15.6.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-static": "^5.6.8",
+    "react-testing-library": "^2.1.1",
+    "redux": "^3.7.2",
+    "redux-auth-wrapper": "^2.0.2",
+    "styled-components": "^3.2.5",
+    "tai-password-strength": "^1.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.3",
+    "babel-register": "^6.26.0",
+    "eslint-config-react-tools": "1.x.x",
+    "faker": "^4.1.0",
+    "lodash": "^4.17.5",
+    "regenerator-runtime": "^0.11.1",
+    "serve": "^6.1.0"
+  }
+}

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogoutForm Component Test Renders with correct default values from redux store 1`] = `
+<div>
+  <button
+    data-testid="logout-form-button"
+  >
+    Logout
+  </button>
+</div>
+`;
